@@ -39,3 +39,15 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = 'com.qx'
+            artifactId = 'utilcode'
+            version = '1.30.0'
+
+            from components.java
+        }
+    }
+}
